@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        121313123
+    </div>
+    <script>
+        String.prototype.replaceAll = function (reallyDo, replaceWith, ignoreCase) {
+            if (!RegExp.prototype.isPrototypeOf(reallyDo)) {
+                return this.replace(new RegExp(reallyDo, (ignoreCase ? "gi" : "g")), replaceWith);
+            } else {
+                return this.replace(reallyDo, replaceWith);
+            }
+        }
+        var tt = 'ererererereryyyMMMMMSASASss'
+        var regex = /[^yMdHms]/g;
+        var format = tt.replaceAll(regex, '');
+        console.log('format', format)
+        var format2 = 'wwwwwwsdsdss-----sdsdsdss---'.replaceAll('-', '|');
+        console.log('format2', format2)
+
+    </script>
+
+</body>
+
+</html>

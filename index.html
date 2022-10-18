@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        121313123
+    </div>
+    <script>
+        const arr = ['', 'T1', 'BUSINESS', '=', '1', '', '12121', 'OR', '', '', 'T1', 'DATA_DT', '>', '2', 'T2', 'CANAL_NO', 'AND', '', '', 'T3', 'OFFLINE_AMOUNT', '=', '1', '', '23', 'AND', '']
+        console.log(arr.entries())
+      
+        ['fullscreenchange','webkitfullscreenchange','mozfullscreenchange'].forEach((item,index) => {
+          window.addEventListener(item,function(){
+            console.log('121212121212')
+          });
+        })
+ 
+        window.addEventListener('resize', function () {
+            console.log([window])
+            console.log('qdfdsfdfd', checkFull())
+        })
+
+        function checkFull() {
+            var isFull = document.fullscreenEnabled || window.fullScreen || document.webkitIsFullScreen || document.msFullscreenEnabled;
+            //to fix : false || undefined == undefined
+            // if (isFull === undefined) { isFull = false; }
+            return isFull;
+        }
+    </script>
+
+</body>
+
+</html>
